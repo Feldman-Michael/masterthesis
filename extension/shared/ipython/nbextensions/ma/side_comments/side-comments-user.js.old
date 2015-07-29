@@ -1,0 +1,37 @@
+define(["require", "nbextensions/gdrive/gapi_utils", 'exports'],
+function (require, gapiutils, exports) {
+
+  var currentUser = {
+    id: 1,
+    avatarUrl: "",
+    name: "Anonymous"
+  };
+
+  exports.gapi_ready = gapiutils.gapi_ready.then(function () {
+    var request = gapi.client.drive.about.get();
+    var userName = "Anonymous"
+    var pictureUrl = "https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/256/guest.png"
+    gapiutils.execute(request).then(function (result) {
+      userEmailAddress = result.user.emailAddress;
+      userName = result.user.displayName;
+      permissionId = result.user.permissionId;
+
+      // Get photo from GoogleDrive+ account if exists
+      if(result.user.picture) {
+        pictureUrl = result.user.picture.url;
+      }
+
+      console.log("GAPI ready, user information for " + user + " retrieved");
+
+      currentUser = {
+        id: userEmailAddress,
+        avatarUrl: pictureUrl,
+        name: userName
+      };
+    });
+
+    return currentUser;
+
+  });
+
+});
