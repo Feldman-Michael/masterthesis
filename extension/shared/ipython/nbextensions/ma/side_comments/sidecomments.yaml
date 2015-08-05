@@ -1,7 +1,0 @@
-Type: IPython Notebook Extension
-Name: Side Comments
-Description: Addint side comments to a IPython notebook to enable collaboration over Google Docs.
-Link: https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Shift-tab
-Icon: icon.png
-Main: side-comments.js
-Compatibility: 3.x
