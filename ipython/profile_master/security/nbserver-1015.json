@@ -1,0 +1,9 @@
+{
+  "hostname": "localhost",
+  "secure": false,
+  "pid": 1015,
+  "base_url": "/",
+  "notebook_dir": "/mnt/ipython/extensions/ma/ma_backend/dist_project/gdapi",
+  "port": 8888,
+  "url": "http://localhost:8888/"
+}

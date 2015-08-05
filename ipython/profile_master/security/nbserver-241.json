@@ -1,0 +1,9 @@
+{
+  "notebook_dir": "/mnt/ipython/extensions",
+  "url": "http://localhost:8888/",
+  "port": 8888,
+  "base_url": "/",
+  "pid": 241,
+  "hostname": "localhost",
+  "secure": false
+}

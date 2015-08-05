@@ -1,0 +1,9 @@
+{
+  "port": 8888,
+  "secure": false,
+  "pid": 855,
+  "url": "http://localhost:8888/",
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/mnt/ipython/extensions/ma/ma_backend"
+}
