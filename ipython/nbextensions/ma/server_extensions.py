@@ -10,7 +10,7 @@ import os
 import yaml
 import json
 from server.side_comments.ipy_side_comments_websocket import WebSocketHandler
-from server.dist_project.ipy_new_distproject import New_DistProjectHandler
+from server.dist_project.ipy_new_distproject import New_PageHandler
 from server.dist_project.ipy_service_distproject import DistProjectHandler
 
 class NBExtensionHandler(IPythonHandler):
@@ -64,7 +64,7 @@ def load_jupyter_server_extension(nbapp):
     base_url = webapp.settings['base_url']
     webapp.add_handlers(".*$", [
         (ujoin(base_url, r"/nbextensions/"), NBExtensionHandler), (ujoin(base_url, r"/comments"), WebSocketHandler),
-        (ujoin(base_url, r"/new"), New_DistProjectHandler),
+        (ujoin(base_url, r"/new"), New_PageHandler),
         (ujoin(base_url, r"/distprojects/(convert)$"), DistProjectHandler),
         (ujoin(base_url, r'/distprojects/(?P<prid>[0-9A-Za-z]+$)'),DistProjectHandler),
         (ujoin(base_url, r'/distprojects'),DistProjectHandler)

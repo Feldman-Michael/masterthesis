@@ -28,7 +28,7 @@ class Encoder(json.JSONEncoder):
             return obj
 
 '''
-    /distprojects:
+    /distprojects: 
         post:
             description: Create new Distributed Project
 

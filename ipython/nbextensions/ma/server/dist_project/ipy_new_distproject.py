@@ -9,8 +9,8 @@ from tornado import web
 import json
 
 
-class New_DistProjectHandler(IPythonHandler):
-    """Render the create distributed project interface """
+class New_PageHandler(IPythonHandler):
+    """Render the create distributed project interface  """
     @web.authenticated
     def get(self):
         self.write(self.render_template('new.html',

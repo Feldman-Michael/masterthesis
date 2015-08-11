@@ -1,7 +1,7 @@
 {
   "transport": "scp",
   "hostname": "10.19.0.20",
-  "port": 22,
+  "port": "22",
   "username": "root",
   "useAgent": true,
   "uploadOnSave": true,
