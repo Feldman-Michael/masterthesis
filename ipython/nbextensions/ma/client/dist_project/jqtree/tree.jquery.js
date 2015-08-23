@@ -1044,7 +1044,7 @@ Node = (function() {
 
   /*
   Create tree from data.
-  
+
   Structure of data is:
   [
       {
@@ -1077,7 +1077,7 @@ Node = (function() {
 
   /*
   Add child.
-  
+
   tree.addChild(
       new Node('child1')
   );
@@ -1091,7 +1091,7 @@ Node = (function() {
 
   /*
   Add child at position. Index starts at 0.
-  
+
   tree.addChildAtPosition(
       new Node('abc'),
       1
@@ -1112,7 +1112,7 @@ Node = (function() {
 
   /*
   Remove child. This also removes the children of the node.
-  
+
   tree.removeChild(tree.children[0]);
    */
 
@@ -1129,7 +1129,7 @@ Node = (function() {
 
   /*
   Get child index.
-  
+
   var index = getChildIndex(node);
    */
 
@@ -1140,7 +1140,7 @@ Node = (function() {
 
   /*
   Does the tree have children?
-  
+
   if (tree.hasChildren()) {
       //
   }
@@ -1157,15 +1157,15 @@ Node = (function() {
 
   /*
   Iterate over all the nodes in the tree.
-  
+
   Calls callback with (node, level).
-  
+
   The callback must return true to continue the iteration on current node.
-  
+
   tree.iterate(
       function(node, level) {
          console.log(node.name);
-  
+
          // stop iteration after level 2
          return (level <= 2);
       }
@@ -1195,9 +1195,9 @@ Node = (function() {
 
   /*
   Move node relative to another node.
-  
+
   Argument position: Position.BEFORE, Position.AFTER or Position.Inside
-  
+
   // move node1 after node2
   tree.moveNode(node1, node2, Position.AFTER);
    */

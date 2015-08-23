@@ -12,6 +12,8 @@ import json
 from server.side_comments.ipy_side_comments_websocket import WebSocketHandler
 from server.dist_project.ipy_new_distproject import New_PageHandler
 from server.dist_project.ipy_service_distproject import DistProjectHandler
+from server.dist_project.ipy_service_steps import StepHandler
+from server.dist_project.ipy_service_actions import ActionHandler
 
 class NBExtensionHandler(IPythonHandler):
     """Render the notebook extension configuration interface."""
@@ -67,5 +69,11 @@ def load_jupyter_server_extension(nbapp):
         (ujoin(base_url, r"/new"), New_PageHandler),
         (ujoin(base_url, r"/distprojects/(convert)$"), DistProjectHandler),
         (ujoin(base_url, r'/distprojects/(?P<prid>[0-9A-Za-z]+$)'),DistProjectHandler),
-        (ujoin(base_url, r'/distprojects'),DistProjectHandler)
+        (ujoin(base_url, r'/distprojects'),DistProjectHandler),
+        (ujoin(base_url, r'/steps'),StepHandler),
+        (ujoin(base_url, r'/steps/(?P<sid>[0-9A-Za-z]+$)'),StepHandler),
+        (ujoin(base_url, r'/actions$'),ActionHandler),
+        (ujoin(base_url, r'/actions/(?P<category>category)/(?P<cid>[0-9A-Za-z]+$)'),ActionHandler),
+        (ujoin(base_url, r'/actions/(?P<category>category)$'),ActionHandler),
+        (ujoin(base_url, r'/actions/(?P<acid>[0-9A-Za-z]+$)'),ActionHandler)
     ])
