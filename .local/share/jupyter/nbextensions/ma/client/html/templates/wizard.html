@@ -1,0 +1,31 @@
+{% extends "page.html" %} {% block title %}{{page_title}}{% endblock %}
+{% block stylesheet %} {{super()}}
+<script type="text/javascript" charset="utf-8" data-requiremodule="jquery" src="/static/components/jquery/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+<!--<link href="/nbextensions/ma/client/dist_project/jqaccordion/jqaccordion.css" rel="stylesheet">-->
+<link href="/nbextensions/ma/client/common/js/jqpopup/magnific-popup.css" rel="stylesheet"/>
+<link href="/nbextensions/ma/client/common/js/dropdown/dropdown.css" rel="stylesheet/less"/>
+
+
+<link href="/nbextensions/ma/client/common/css/dist_project.css" rel="stylesheet/less"/>
+<link href="/nbextensions/ma/client/common/js/jqsteps/jquery.steps.css" rel="stylesheet/less"/>
+<link href="/nbextensions/ma/client/common/js/jqaccordion/plugin.multilevel.accordion.css" rel="stylesheet/less"/>
+
+<script src="/nbextensions/ma/client/common/js/less/less.js" type="text/javascript"></script>
+
+
+{% endblock %}
+{% block params %} data-base-url='{{base_url}}' data-extension-list='{{extension_list}}' {% endblock %}
+{% block headercontainer
+%}
+
+<center>
+  <h2>Create Distributed Project</h2>
+</center>
+
+<div id="master-wizard"></div>
+
+<script src="{{ " /nbextensions/config/main.js " }}" type="text/javascript" charset="utf-8"></script>
+<script src="{{ " /nbextensions/ma/client/html/wizard/main_wizard.js " }}" type="text/javascript" charset="utf-8"></script>
+{% endblock %}

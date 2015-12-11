@@ -1,0 +1,110 @@
+ID,Name,Type,Parent
+2,Data Pre-processing,root,none
+999,Custom Actions,folder,2
+31,Data Cleaning (40),folder,2
+44,Data Denoising (17),folder,31
+57,Brown's Double Exponential Smoothing,default,44
+58,Fast Fourier Filter,default,44
+56,Holt-Winters Double Exponential Smoothing,default,44
+59,LOWESS,default,44
+61,Moving Average (Backward),default,44
+45,Moving Average (Centered),default,44
+46,Moving Average (Forward),default,44
+51,Moving Median (Backward),default,44
+50,Moving Median (Centered),default,44
+52,Moving Median (Forward),default,44
+53,Percentile Filter,default,44
+60,RLOWESS,default,44
+54,Savitzky-Golay Smoothing,default,44
+55,Single Exponential Smoothing,default,44
+48,Weighted Backward Moving Average,default,44
+47,Weighted Centered Moving Average,default,44
+49,Weighted Forward Moving Average,default,44
+62,Handling Improper Values (12),folder,31
+63,Discarding Improper Values (1),folder,62
+64,Complete Case Analysis,default,63
+65,Reconstructing Improper Values (11),folder,62
+76,C4.5,default,65
+66,Last Observation Carried Forward (LOCF),default,65
+74,Linear Regression,default,65
+68,Mean,default,65
+71,Median,default,65
+72,Midrange,default,65
+73,Mode,default,65
+75,Polynomial Regression,default,65
+69,Trimmed Mean,default,65
+67,Using Reference Data,default,65
+70,Weighted Mean,default,65
+32,Outlier Detection (11),folder,31
+39,Box Plot,default,32
+43,Chi-Squared Test,default,32
+37,Dixon-type (Q) tests,default,32
+35,Grubbs' Test,default,32
+34,Hampel Identifier,default,32
+42,K-Means Clustering,default,32
+33,Maximum Likelihood,default,32
+40,One-sided Median,default,32
+36,Tietjen-Moore Test,default,32
+38,Trimmed Mean,default,32
+41,Two-sided Median,default,32
+3,Data Descretization (6),folder,2
+9,1RD,default,3
+7,CAIM,default,3
+8,Chi-Squared Test,default,3
+5,Equal-frequency Interval Binning,default,3
+4,Equal-width Interval Binning,default,3
+6,K-Means Clustering,default,3
+77,Data Itergration (7),folder,2
+85,Redundancy Detection (1),folder,77
+86,Chi-Squared Test,default,85
+78,Resolving Data Value Conflict (6),folder,77
+80,Considering All Possibilities,default,78
+84,Last Observation Carried Forward (LOCF),default,78
+83,Mean,default,78
+81,Mode,default,78
+79,Passing It On,default,78
+82,Rolling the Dice,default,78
+97,Data Reduction (9),folder,2
+108,Data Deduplication (1),folder,97
+109,Post-process Deduplication,default,108
+98,Dimensionality Reduction (2),folder,97
+100,K-Means Clustering,default,98
+99,Principal Component Analysis (PCA),default,98
+101,Numerosity Reduction (6),folder,97
+105,Equal-frequency Interval Binning,default,101
+104,Equal-width Interval Binning,default,101
+102,Linear Regression,default,101
+103,Polynomial Regression,default,101
+107,Simple Random Sample with Replacement (SRSWR),default,101
+106,Simple Random Sample without Replacement (SRSWOR),default,101
+87,Data Transformation (7),folder,2
+88,Data Scaling (4),folder,87
+89,Decimal Scaling,default,88
+91,Min-Max Scaling,default,88
+92,Unitnorm Scaling,default,88
+90,Zero-Mean Scaling,default,88
+93,Data Sorting (3),folder,87
+94,Bubble Sort,default,93
+96,Quick Sort,default,93
+95,Selection Sort,default,93
+10,Mathematical Computation (16),folder,2
+19,CUSUM,default,10
+13,Handling Data Nonnormality (1),folder,10
+14,Box-Cox Transformation,default,13
+15,Handling Data Stationarity (3),folder,10
+16,Box-Cox Transformation,default,15
+18,Sign Test,default,15
+17,Testing Data Stationarity with Runs Test,default,15
+20,Mean,default,10
+21,Median,default,10
+22,Midrange,default,10
+23,Mode,default,10
+26,Numerical Differentiation (3),folder,10
+28,Backward Difference,default,26
+29,Central Difference,default,26
+27,Forward Difference,default,26
+30,Standard Deviation,default,10
+24,Trimmed Mean,default,10
+11,Variance Estimation (1),folder,10
+12,Mean Absolute Deviation,default,11
+25,Weighted Mean,default,10

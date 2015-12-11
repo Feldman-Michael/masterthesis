@@ -1,0 +1,204 @@
+ID,Name,Type,Parent
+1,Data Preparation,folder,none
+999,Custom Actions,folder,1
+2,Data Integration,folder,1
+3,Finding Redundant Attributes,folder,2
+4,x2 Correlation Test,leaf,3
+5,Correlation Coefficient and Covariance for Numeric Data,leaf,3
+6,Detecting Tuple Duplication and Inconsistency,folder,2
+7,character-based distance measures for nominal values,folder,6
+8,edit distance,leaf,7
+9,Jaro,leaf,7
+10,q-grams,leaf,7
+11,Token-based similarity metrics,folder,6
+12,Measures based on atomic strings,leaf,11
+13,WHIRL distance,leaf,11
+14,Measures based on phonetic similarities,folder,6
+15,Metaphone,leaf,14
+16,ONCA,leaf,14
+17,Testing two instances for duplication,folder,6
+18,Probabilistic approaches,folder,17
+19,Fellegi-Sunter model,leaf,18
+20,Supervised and semisupervised approaches,folder,17
+21,CART,leaf,20
+22,SVM,leaf,20
+23,Distance-based techniques,folder,17
+24,Clustering bootstrapping,leaf,23
+25,hierarchical graph models,leaf,23
+26,Data cleaning,folder,1
+27,Missing values,folder,26
+28,Maximum Likelihood Imputation Methods,folder,27
+29,Expectation-Maximization,leaf,28
+30,Multiple Imputation,leaf,28
+31,Bayesian Principal Component Analysis,folder,28
+32,PC Regression,leaf,31
+33,Bayesian Estimation,leaf,31
+34,EM-Like Repetitive Algorithm,leaf,31
+35,Imputation of Missing Values. Machine Learning Based Methods,folder,27
+36,Imputation with K-Nearest Neighbor (KNNI),leaf,35
+37,Weighted Imputation with K-Nearest Neighbour (WKNNI),leaf,35
+38,K-means Clustering Imputation (KMI),leaf,35
+39,Imputation with Fuzzy K-means Clustering (FKMI),leaf,35
+40,Support Vector Machines Imputation (SVMI),leaf,35
+41,Event Covering (EC),leaf,35
+42,Singular Value Decomposition Imputation (SVDI),leaf,35
+43,Local Least Squares Imputation (LLSI),folder,35
+44,Selecting the Instances,leaf,43
+45,Local Least Squares Imputation,leaf,43
+46,Noisy data,folder,26
+47,Identifying Noise,folder,46
+48,Noise Filtering at Data Level,folder,47
+49,Ensemble Filter,leaf,48
+50,Cross-Validated Committees Filter,leaf,48
+51,Iterative-Partitioning Filter,leaf,48
+52,Empirical Analysis of Noise Filters,folder,47
+53,Noise Filters for Class Noise,leaf,52
+54,Noise Filtering Efficacy Prediction by Data Complexity Measures,leaf,52
+55,Multiple Classifier Systems with Noise,folder,52
+56,Data Sets with Class Noise,leaf,55
+57,Data Sets with Attribute Noise,leaf,55
+58,Analysis of the OVO Decomposition with Noise,folder,52
+59,Data Sets with Class Noise,leaf,58
+60,Data Sets with Attribute Noise,leaf,58
+61,Data Normaization,folder,1
+62,Min-Max Normalization,leaf,61
+63,Z-score Normalization,leaf,61
+64,Decimal Scaling Normalization,leaf,61
+65,Data Transformation,folder,1
+66,Linear Transformations,leaf,65
+67,Quadratic Transformations,leaf,65
+68,Non-polynomial Approximations of Transformations,leaf,65
+69,Polynomial Approximations of Transformations,leaf,65
+70,Rank Transformations,leaf,65
+71,Box-Cox Transformations,leaf,65
+72,Spreading the Histogram,leaf,65
+73,Nominal to Binary Transformation,leaf,65
+74,Transformations via Data Reduction,leaf,65
+75,Data Reduction,folder,1
+76,The Curse of Dimensionality,folder,75
+77,Principal Components Analysis,leaf,76
+78,Factor Analysis,leaf,76
+79,Multidimensional Scaling,leaf,76
+80,Locally Linear Embedding,leaf,76
+81,Data Sampling,folder,75
+82,Data Condensation,leaf,81
+83,Data Squashing,leaf,81
+84,Data Clustering,leaf,81
+85,Binning and Reduction of Cardinality,leaf,75
+86,Feature Selection,folder,1
+87,Perspectives,folder,86
+88,The Search of a Subset of Features,leaf,87
+89,Selection Criteria,leaf,87
+90,Filter Wrapper and Embedded Feature Selection,leaf,87
+91,Aspects,folder,86
+92,Output of Feature Selection,folder,91
+93,Feature Ranking Techniques,leaf,92
+94,Minimum Subset Techniques,leaf,92
+95,Evaluation,folder,91
+96,Inferability,leaf,95
+97,Interpretability,leaf,95
+98,Data Reduction,leaf,95
+99,Accuracy,leaf,95
+100,Complexity,leaf,95
+101,Number of features selected,leaf,95
+102,Speed of the FS method,leaf,95
+103,Generality of the selected features,leaf,95
+104,Most Representative Feature Selection,folder,86
+105,Exhaustive Methods,leaf,104
+106,Heuristic Methods,leaf,104
+107,Nondeterministic Methods,leaf,104
+108,Feature Weighting Methods,leaf,104
+109,Feature Extraction,leaf,86
+110,Feature Construction,leaf,86
+111,Experimental Comparative Analyses in Feature Selection,leaf,86
+112,Instance Selection,folder,1
+113,Prototype Selection Taxonomy,folder,112
+114,Common Properties in Prototype Selection Methods,folder,113
+115,Direction of Search,leaf,114
+116,Type of Selection,folder,114
+117,Condensation,leaf,116
+118,Edition,leaf,116
+119,Hybrid,leaf,116
+120,Evaluation of Search,folder,114
+121,Filter,leaf,120
+122,Wrapper,leaf,120
+123,Criteria to Compare Prototype Selection Methods,folder,114
+124,Storage reduction,leaf,123
+125,Noise tolerance,leaf,123
+126,Generalization accuracy,leaf,123
+127,Time requirements,leaf,123
+128,Prototype Selection Methods,leaf,113
+129,Taxonomy of Prototype Selection Methods,leaf,113
+130,Types of instance selection,folder,112
+131,Condensation Algorithms,folder,130
+132,Incremental,folder,131
+133,Condensed Nearest Neighbor (CNN),leaf,132
+134,TomekCondensed NearestNeighbor(TCNN),leaf,132
+135,Modified Condensed Nearest Neighbor (MCNN),leaf,132
+136,Generalized Condensed Nearest Neighbor (GCNN),leaf,132
+137,Fast Condensed Nearest Neighbor family (FCNN),leaf,132
+138,Prototype Selection based on Clustering (PSC,leaf,132
+139,Decremental,folder,131
+140,Reduced Nearest Neighbor (RNN,leaf,139
+141,Shrink (Shrink),leaf,139
+142,Minimal Consistent Set (MCS),leaf,139
+143,Modified Selective Algorithm (MSS),leaf,139
+144,Batch,folder,131
+145,Patterns byOrdered Projections (POP),leaf,144
+146,Max Nearest Centroid Neighbor (Max-NCN),leaf,144
+147,Reconsistent,leaf,144
+148,Template ReductionKNN(TRKNN),leaf,144
+149,Edition Algorithms,folder,130
+150,Decremental,folder,149
+151,Edited Nearest Neighbor (ENN),leaf,150
+152,Repeated-ENN (RENN),leaf,150
+153,Multiedit,leaf,150
+154,Relative Neighborhood Graph Edition (RNGE),leaf,150
+155,Modified Edited Nearest Neighbor (MENN),leaf,150
+156,Nearest Centroid Neighbor Edition (NCNEdit),leaf,150
+157,Batch,folder,149
+158,AllKNN,leaf,157
+159,Model Class Selection (MoCS),leaf,157
+160,Hybrid Algorithms,folder,130
+161,Incremental,folder,160
+162,Instance-Based Learning Algorithms Family (IB3),leaf,161
+163,Decremental,leaf,160
+164,Filter,folder,160
+165,Variable Similarity Metric (VSM),leaf,164
+166,Decremental Reduction Optimization Procedure Family (DROP),leaf,164
+167,Support Vector Based Prototype Selection (SVBPS),leaf,164
+168,Class Conditional Instance Selection (CCIS),leaf,164
+169,Wrapper,folder,160
+170,Backward Sequential Edition (BSE),leaf,169
+171,Batch,folder,160
+172,Iterative Case Filtering (ICF),leaf,171
+173,Hit-Miss Network Algorithms (HMN),leaf,171
+174,Mixed+Wrapper,folder,160
+175,Encoding Length Familiy (Explore),leaf,174
+176,CHC(CHC),leaf,174
+177,Steady-state memetic algorithm (SSMA),leaf,174
+178,COoperative COevolutionary Instance Selection (CoCoIS),leaf,174
+179,Fixed+Wrapper,folder,160
+180,Random Mutation Hill Climbing (RMHC),leaf,179
+181,Prototyping,folder,112
+182,Prototype Generation,leaf,181
+183,Distance Metrics Feature Weighting and Combinations with Feature Selection,leaf,181
+184,Hybridizations with Other Learning Methods and Ensembles,leaf,181
+185,Scaling-Up Approaches,leaf,181
+186,Data Complexity,leaf,181
+187,Discretization,folder,1
+188,Discretization Process,folder,187
+189,Feature,leaf,188
+190,Instance,leaf,188
+191,Cut Point,leaf,188
+192,Arity,leaf,188
+193,Sorting,leaf,188
+194,Selection of a Cut Point,leaf,188
+195,Splitting/Merging,leaf,188
+196,Stopping Criteria,leaf,188
+197,Discretization Specific Analysis,leaf,188
+198,Optimal Multisplitting,leaf,188
+199,Discretization of Continuous Labels,leaf,188
+200,Fuzzy Discretization,leaf,188
+201,Cost-Sensitive Discretization,leaf,188
+202,Semi-Supervised Discretization,leaf,188

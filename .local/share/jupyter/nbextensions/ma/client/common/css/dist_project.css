@@ -1,0 +1,1085 @@
+@base:#2c3e50;
+@base2:#5e6d81;
+@base-light-grey: #dbe1e8;
+@base-blue:#14b9d6;
+@base-green:#1fbba6;
+@base-orange:#f27935;
+
+/*#2184be */
+
+::-webkit-input-placeholder {
+vertical-align: middle;
+color: @base-light-grey;
+}
+
+:-moz-placeholder {
+vertical-align: middle;
+color: @base-light-grey;
+}
+
+::-webkit-scrollbar {
+    width:0px;
+}
+
+i {
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.fw-value{
+  -webkit-user-select: all; /* webkit (safari, chrome) browsers */
+  -moz-user-select: all; /* mozilla browsers */
+  -khtml-user-select: all; /* webkit (konqueror) browsers */
+  -ms-user-select: all; /* IE10+ */
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  outline:0;
+}
+
+
+div.stepdescription {
+  background: #fff;
+  border-radius: 5px;
+  margin: 1% 1% 2% 1%;
+  -webkit-flex: 0 1 70px;
+  flex: 0 1 70px;
+  vertical-align: middle;
+}
+
+div.stepdescription span {
+
+  font-size: 1em;
+  font-weight: 400;
+  color: rgba(94, 109, 129, 0.8);
+  height: 70px; /* image's height */
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+div.stepdescription i {
+  height: 100%;
+  float: left;
+  color: @base-green;
+  margin:20px;
+}
+div.stepcontent {
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  overflow: hidden;
+  margin: 0 1%;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.mining-step {
+  width: 18%;
+  height: 300px;
+  display: block;
+  text-decoration: none;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  float: left;
+  text-align: center;
+  padding: 0em 0.2em;
+  margin: 0 1%;
+}
+
+.mining-step.thin {
+  width: 14%;
+  height: 100%;
+  margin: 0 0.2%;
+}
+
+.mining-step.short {
+  height: 250px;
+}
+
+.mining-step.large {
+  width: 70%;
+  height: 430px;
+  /*background: #f1f1f1;*/
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+.mining-step.large .assignment .stitle{
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+
+.mining-step.large .assignment{
+  display: block;
+  width: auto;
+  height: auto;
+  background: white;
+  color: #fff;
+  margin: 0 0 1em 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /*padding: 0.6em;*/
+  color: #aaa;
+
+}
+
+.mining-step.large .assignment.aactive{
+  background: white;
+  outline: none;
+  color: white;
+}
+
+.mining-step.large .assignment > div > div > i{
+  display: table-cell;
+  color: @base-light-grey;
+  vertical-align: middle;
+  padding: 0em 1em;
+  width: 5%;
+}
+
+
+.mining-step.large .assignment .aactions {
+  width: auto;
+  height: 40px;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.mining-step.large .assignment > div {
+  padding: 5px;
+}
+
+.aactions:empty:not(:focus):before{
+  content: attr(data-ph);
+  color: @base-light-grey;
+  font-size: 1em;
+  font-family: "FontAwesome";
+  float: left;
+  vertical-align: middle;
+  padding: 5px;
+  margin-right: 5px;
+
+ }
+
+.ainput, .adescription {
+  margin: 0.5em 0;
+  display: block;
+}
+
+.mining-step.large .assignment .adescription, .mining-step.large .assignment .aactions,
+.mining-step.large .assignment .ainput{
+  margin: 0.2em 0;
+}
+
+
+.adescription{
+    float: left;
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #555;
+    padding: 5px;
+    margin-bottom: 0.4em;
+    border: none;
+    height: 250px;
+}
+.adescription:empty:not(:focus):before{
+
+}
+.mining-step.large .assignment .adescription{
+    border: none;
+    height: 60px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 95%;
+}
+
+.mining-step.chevron {
+  display: table;
+  width: 50px;
+}
+
+.mining-step.chevron a {
+  font-size: 32px;
+  display: table-row;
+  text-align: center;
+  height: 50%;
+  text-decoration: none;
+}
+
+.mining-step.chevron a i{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.mining-step span.atitle {
+  display: block;
+  width: 200px;
+  text-align: left;
+  font-size: 1.1em;
+  padding: 5px
+}
+
+span.stitle {
+  display: block;
+  /*vertical-align: middle;*/
+  font-size: 1em;
+  padding: 0.4em 0em;
+  background: fade(@base, 90%);
+  border-radius: 3px 3px 0 0;
+  color: white;
+  font-weight: 500;
+}
+
+.proverview .assignment span.stitle {
+  background: fade(@base, 90%);
+  font-weight: normal;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.mining-step .ms-body {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  background-color: @base;
+  color: #fff;
+
+}
+.mining-step.unselected .ms-body .desc {
+  /* display: table-row; */
+  font-size: 0.9em;
+  padding: 1em;
+  color: @base2;
+  font-weight: 500;
+}
+
+.mining-step .ms-body .desc {
+  /* display: table-row; */
+  font-size: 0.9em;
+  padding: 1em;
+  color: @base-light-grey;
+  font-weight: 500;
+}
+
+.mining-step .ms-body > i {
+  font-size: 32px;
+  color: @base-blue;
+  margin: 2.5em 0 0.5em;
+}
+
+.mining-step span > i {
+  font-size: 16px;
+  color: @base2;
+  margin: 3px 10px 0 0;
+  float: right;
+  vertical-align: bottom;
+}
+
+.mining-step span > i.fa-times:hover {
+  color: #f1f1f1;
+}
+
+.mining-step.unselected .ms-body {
+  background-color: white;
+  color: #aaa;
+}
+.mining-step span {
+  display: block;
+  /*vertical-align: middle;*/
+  font-size: 1.1em;
+  padding-bottom: 0.5em;
+}
+
+.mining-step > .assignment span.stitle {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.mining-step > .assignment.aactive span.stitle {
+  text-align: left;
+  padding-left: 10px;
+  background: @base-orange;
+}
+
+.mining-step .saction {
+  text-align: center;
+  padding: 0;
+  display: block;
+}
+.mining-step .saction a {
+  background: @base;
+  color: #fff;
+  margin: 0.4em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.mining-step.unselected .saction a {
+  background: #eee;
+  color: #aaa;
+}
+.mining-step .ms-body .dropable {
+  display: block;
+  /* margin: 1.5em 0.5em; */
+  height: 95%;
+  /* border: 1px dashed rgba(155, 89, 182, 0.5); */
+  -webkit-border-radius:0 0 5px 5px;
+  -moz-border-radius:0 0 5px 5px;
+  border-radius:0 0 5px 5px;
+  background: #fff;
+}
+
+.mining-step .ms-body .acont {
+  display: block;
+  /*margin: 0.2em 0.5em;*/
+  height: 95%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 2px;
+  background: #fff;
+  /*padding: 0.2em;*/
+  overflow: scroll;
+  color: #337ab7;
+}
+
+.mining-step.step3 .ms-body  {
+  background: none;
+  color: #337ab7;
+}
+
+.arr {
+  margin: 0.2em 0.5em;
+  display: block;
+  float: left;
+  height: 80%;
+}
+
+.mining-step.thin div.ms-body {
+  display: block;
+}
+.dropable {
+  /* padding: 0.2em; */
+}
+
+.dropable > ul:empty:before{
+font-family: 'FontAwesome';
+content:attr(data-icon);
+speak: none;
+color: @base-blue;
+font-weight: 500;
+vertical-align: middle;
+position: relative;
+text-align: center;
+display: block;
+top: 40%;
+font-size: 24px;
+
+}
+
+.dropable ul {
+  height: 100%;
+}
+.dropable ul li {
+  list-style: none;
+}
+.aactions ul{
+  padding-left: 0;
+}
+
+li.action-item a{
+  color: #f0f0f0;
+}
+
+li.action-item.ui-draggable-dragging{
+  background: /* rgba(74, 137, 220,0.8) */ rgba(33, 132, 190,0.8);
+  padding: 6px;
+  font-size: 11px;
+  border-radius: 2px;
+  list-style: none;
+  font-weight: 400;
+
+}
+
+li.action-item.ui-draggable-dragging i, li.action-item a > i {
+  display: none;
+}
+
+#action_list li.action-item a > i {
+  display: block;
+}
+.acont li.action-item, .dropable li.action-item, .aactions li.action-item {
+  /*background: rgba(0, 0, 0, 0.05); */
+  background: /* rgba(74, 137, 220,0.8) */ rgba(33, 132, 190,0.8) !important;
+  padding: 6px;
+  font-size: 11px;
+  border-radius: 2px;
+  font-weight: 400;
+  /*color: rgba(0, 0, 0, 0.6);*/
+  color: #f0f0f0;
+  margin: 0 0 0.1em 0;
+  list-style: none;
+}
+
+.aactions li.action-item{
+  margin: 0.1em;
+  float: left;
+}
+
+.acont li.action-item a, .dropable li.action-item a, .aactions li.action-item a {
+  color: #f0f0f0;
+}
+
+/* .acont li.action-item > i, */
+.dropable li.action-item > a > i, .aactions li.action-item > i {
+  display: none;
+}
+
+.dropable li.action-item > i, .acont li.action-item > i{
+  float: right;
+  margin: -4px -2px 0 0;
+  color: @base2;
+}
+
+.dropable li.action-item > i:hover{
+  float: right;
+  margin: -4px -2px 0 0;
+  color: #f1f1f1;
+}
+
+
+.aactions div.action-item {
+display: inline-block;
+float: left;
+margin: 0.5em;
+}
+
+div.proverview {
+  padding: 1em 2em;
+  width: 85%;
+  height: 100%;
+  background: #fff;
+  display: block;
+  overflow: scroll;
+  border-radius: 5px;
+  color: @base2;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.proverview h3 {
+  border-bottom: 1px solid @base-light-grey;
+  padding-bottom: 10px;
+  color: @base;
+}
+
+.proverview .fw {
+  display: -webkit-flex;
+  dispay: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  padding: 5px 0px;
+  width: auto;
+}
+
+.proverview .fw .fw-icon {
+  float: left;
+  width: 50px;
+  padding: 5px 10px;
+  color: fade(@base2, 70%);
+}
+
+.master .proverview .fw .fw-icon,.master .proverview .fw .fw-label {
+  color: @base;
+}
+
+.master .proverview .fw .fw-icon.fa-bullhorn{
+  color: #e74c3c;
+}
+.proverview .fw .fw-label {
+  float: left;
+  width: 50px;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 1em;
+  color: fade(@base2, 70%);
+}
+
+.proverview .fw .fw-value {
+  float: left;
+  max-width: 310px;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 0.9em;
+  color: @base2;
+  display: block;
+}
+
+.proverview .fw textarea, .proverview .fw input {
+  color: @base2;
+  font-size: 1em;
+}
+
+.proverview .assignment  > .stitle i {
+  display: none;
+}
+
+.proverview .assignment  > .stitle a {
+  float: right;
+  padding-right: 10px;
+  color: @base-light-grey;
+  font-weight: bold;
+}
+
+.proverview .assignment  > .stitle a:hover {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.split.two {
+  disply: block;
+  width: 50%;
+  float: left;
+}
+
+.split.two .fw > div {
+  position: relative;
+  /*display: table-cell;*/
+  width: 100%;
+}
+
+.assignment span.stitle {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.assignment.aactive span.stitle {
+  text-align: left;
+  padding-left: 10px;
+  background: @base-orange;
+}
+
+.assignment .stitle{
+  transition: background-color 0.5s ease;
+}
+
+.assignment{
+  display: block;
+  width: auto;
+  height: auto;
+  background: white;
+  color: #fff;
+  margin: 0 0 1em 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /*padding: 0.6em;*/
+  color: #aaa;
+
+}
+
+.assignment.aactive{
+  background: white;
+  outline: none;
+  color: white;
+}
+
+.assignment > div > div > i{
+  display: table-cell;
+  color: @base-light-grey;
+  vertical-align: middle;
+  padding: 0em 1em;
+  width: 5%;
+}
+
+
+.assignment .aactions {
+  width: auto;
+  height: 40px;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.assignment > div {
+  padding: 5px;
+}
+
+.assignment .adescription, .assignment .aactions, .assignment .ainput{
+  margin: 0.2em 0;
+}
+
+.assignment .adescription{
+    border: none;
+    height: 60px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 95%;
+}
+
+
+.assignment .ainput, .ainput{
+  height: 35px;
+  border: none;
+  padding: 3px;
+  width: 80%;
+  max-width: 250px;
+  /*
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  */
+  border-bottom: 2px solid @base-light-grey;
+  color: @base2;
+}
+
+#gpid.ainput{
+  color: fade(@base2, 80%);
+}
+.wizard {
+  min-width: 1024px;
+}
+
+.master > .content {
+  background: #f8f8f8;
+  display: block;
+  margin: 0.5em;
+  min-height: 50em;
+  min-width: 1024px;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 1%;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  display: flex;
+  align-items: center;
+  -webkit-flex-direction: row;
+
+}
+
+.master .content .mining-step {
+  /*-webkit-align-self: stretch;*/
+  height: 45em;
+  width: 240px;
+}
+
+.master .content .mining-step .acont{
+  background: none;
+  height: 550px;
+  overflow: scroll;
+}
+
+.master .content .pr{
+  -webkit-flex: 1 100%;
+  margin: 0 1%;
+  height: 45em;
+  display: -webkit-flex;
+}
+.pr .prmgmt{
+  width: 100px;
+  background: white;
+  margin: 0 1%;
+}
+.master .content .mining-step .project_item {
+  background: fade(@base-green, 90%);
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  /*color: rgba(0, 0, 0, 0.6);*/
+  color: #f0f0f0;
+  margin: 1px 0;
+  list-style: none;
+  height: 45px;
+  text-align: left;
+  margin: 1px;
+  border-radius: 3px;
+  /*border-bottom: 1px solid fade(@base-light-grey, 70%);*/
+}
+
+.master .content .mining-step .project_item:hover {
+  background: @base-green;
+}
+
+.master .content .mining-step .project_item.selected {
+  background: #3e82da;
+}
+
+
+.master .content .mining-step .project_item a{
+  color: white;
+  font-size: 12px;
+}
+
+.master .content .mining-step .project_item span{
+  font-size: 1em;
+  font-weight: normal;
+  color: fade(@base-light-grey, 80%);
+}
+
+
+
+
+.magnific_messages_wrapper{
+  max-height: 60%;
+  overflow: scroll;
+}
+
+.logs {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.logs span{
+  font-family: Courier;
+  font-size: 10px;
+  line-height: 20px;
+  flex-grow: 1;
+}
+
+
+.white-popup > .actions > ul > li
+{
+    float: left;
+}
+
+.white-popup > .actions
+{
+  position: absolute;
+  display: block;
+  text-align: center;
+  /* width: 100%; */
+  bottom: 0px;
+  right: 0px;
+  padding: 0 2em;
+}
+
+.white-popup > .actions > ul
+{
+    display: inline-block;
+    text-align: right;
+}
+
+.white-popup > .actions > ul > li
+{
+    margin: 0 0.5em;
+}
+
+.white-popup > .actions a,
+.white-popup > .actions a:hover,
+.white-popup > .actions a:active
+{
+    background: @base-blue;
+    color: #fff;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.white-popup > .actions .disabled a,
+.white-popup > .actions .disabled a:hover,
+.white-popup > .actions .disabled a:active
+{
+    background: #eee;
+    color: #aaa;
+}
+
+.white-popup > .actions .delete a
+{
+    background: @base-orange;
+    color: #fff;
+}
+
+.white-popup > .redirect_wrapper{
+  position: absolute;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  /* width: 100%; */
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+}
+
+
+.white-popup > .redirect_wrapper .message, .white-popup > .redirect_wrapper .fa-stack {
+  text-align: center;
+  margin: 20px 100px;
+}
+
+.white-popup > .redirect_wrapper .message{
+  color: @base2;
+  font-size: 1.2em;
+}
+
+.white-popup > .redirect_wrapper .icon-background {
+  color: @base-green;
+}
+
+.white-popup > .redirect_wrapper .icon-background {
+  color: @base-green;
+}
+
+.white-popup.warning > .redirect_wrapper .icon-background {
+  color: @base-orange;
+}
+
+.white-popup > .redirect_wrapper .fa-stack-1x {
+  color: #e5e5e5;
+  font-size: 0.6em;
+}
+
+.white-popup > .redirect_wrapper .fa-stack-1x:hover {
+  color: white;
+  font-size: 0.6em;
+}
+
+.white-popup div[name="record"] > span{
+  text-transform: capitalize;
+}
+.white-popup div[name="record"] > span, .white-popup div[name="record"] > input, .white-popup div[name="record"] > textarea {
+  color: @base2;
+  font-size: 1.2em;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 3px;
+}
+.white-popup div[name="record"] > input, .white-popup div[name="record"] > textarea {
+  font-size: 1.1em;
+  border-radius: 3px;
+  border: 1px solid #f1f1f1;
+}
+.master #new_project{
+  float: right;
+  margin-right: 10px;
+  text-decoration: none;
+  color: @base2;
+}
+.master #new_project:hover{
+  color: #f1f1f1;
+
+}
+
+.proverview .activity{
+  display: block;
+}
+.proverview span.activity {
+  font-size: 0.9em;
+  margin: 3px 0;
+}
+
+.proverview div.fw-value {
+  width: auto !important;
+}
+
+.pr .nbmgmt{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  align-content: center;
+  -webkit-align-content: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  width: 13%;
+}
+
+.pr .nbmgmt span.fa-stack{
+  margin-bottom: 20px;
+}
+
+.pr .nbmgmt > div {
+  text-align: center;
+}
+
+.pr .nbmgmt > div > .label{
+  color: @base;
+  font-size: 1em;
+  font-weight: normal;
+}
+.pr .nbmgmt .icon-background6{
+  color: @base;
+}
+
+.pr .nbmgmt .fa-stack-1x {
+  color: #f1f1f1;
+  font-size: 0.6em;
+}
+
+.pr .nbmgmt #_merge .icon-background{
+  color: @base-orange;
+}
+
+.pr .nbmgmt #_merge:hover .icon-background{
+  color: #d35400;
+}
+
+.pr .nbmgmt #_goto a .icon-background{
+  color: @base-green;
+}
+
+.pr .nbmgmt #_goto a:hover .icon-background{
+  color: #16a085;
+}
+
+.pr .nbmgmt #_delete .icon-background{
+  color: #e74c3c;
+}
+
+
+.pr .nbmgmt #_delete:hover .icon-background{
+  color: #c0392b;
+}
+
+.pr .nbmgmt #_notes a .icon-background{
+  color: #F5D76E;
+}
+.pr .nbmgmt #_notes a:hover .icon-background{
+  color: #F7CA18;
+}
+
+
+
+.pr .nbmgmt span:hover .fa-stack-1x {
+  color: white;
+}
+
+.pr .nbmgmt span.disabled > a {
+    pointer-events: none;
+}
+
+.pr .nbmgmt span.disabled > a .icon-background{
+    color: fade(@base2, 70%) !important;
+}
+
+
+p[contenteditable] {
+  /* will match all elements with contenteditable attribute */
+  display: block;
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-user-modify: read-write;
+  word-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  background: white;
+  padding: 10px;
+  line-height: 1.8em;
+  font-family: Consolas, monospace;
+  white-space:  pre-wrap;
+  height: 400px;
+  width: 100%;
+  color: #333;
+}
+
+.fa-stack {
+  cursor: pointer;
+}
+
+.overflow150 {
+  max-height: 150px;
+  overflow: scroll;
+}
+
+/*
+.mining-step{
+  width: 18%;
+height: 300px;
+display: block;
+text-decoration: none;
+border-radius: 5px 5px 0 0;
+-webkit-border-radius: 5px 5px 0 0;
+-moz-border-radius: 5px 5px 0 0;
+float: left;
+text-align: center;
+padding: 0em 0.2em;
+margin: 0 1%;
+}
+
+
+.mining-step.step3 .ms-body{
+  background: none;
+  color: #337ab7;
+}
+
+.mining-step .ms-body {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+
+.mining-step span {
+  display: block;
+font-size: 1.1em;
+padding-bottom: 0.5em;
+}
+
+span.stitle {
+display: block;
+
+font-size: 1em;
+padding: 0.7em 0em;
+background: rgba(44, 62, 80, 0.9);
+border-radius: 3px 3px 0 0;
+color: white;
+font-weight: 500;
+}
+
+.mining-step .ms-body .acon{
+display: block;
+height: 95%;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 2px;
+background: #fff;
+overflow: scroll;
+color: #337ab7;
+}
+
+*/

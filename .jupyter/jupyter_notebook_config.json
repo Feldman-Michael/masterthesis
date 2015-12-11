@@ -1,0 +1,24 @@
+{
+  "NotebookApp": {
+    "tornado_settings": {
+      "contents_js_source": "nbextensions/gdrive/drive-contents"
+    },
+    "server_extensions": [
+      "server_extensions"
+    ],
+    "contents_manager_class": "jupyterdrive.clientsidenbmanager.ClientSideContentsManager"
+  },
+  "NbConvertApp": {
+    "postprocessor_class": "post_embedhtml.EmbedPostProcessor"
+  },
+  "Exporter": {
+    "preprocessors": [
+      "pre_codefolding.CodeFoldingPreprocessor",
+      "pre_pymarkdown.PyMarkdownPreprocessor"
+    ],
+    "template_path": [
+      "/home/ipython/.local/share/jupyter/templates"
+    ]
+  },
+  "format": 1
+}

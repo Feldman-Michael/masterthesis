@@ -1,0 +1,7 @@
+Type: IPython Notebook Extension
+Name: Side Comments
+Description: Adding side comments to a IPython notebook to enable collaboration over real time chat.
+Link: https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Shift-tab
+Icon: icon.png
+Main: main.js
+Compatibility: 4.x

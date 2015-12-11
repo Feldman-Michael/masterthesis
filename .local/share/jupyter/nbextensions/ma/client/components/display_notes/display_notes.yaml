@@ -1,0 +1,7 @@
+Type: IPython Notebook Extension
+Name: Display Notes
+Description: This component will display the shared.txt file (shared notes) as a sticky note in each notebook. Also, it sets the cell limit of 50 lines
+Link:
+Icon: icon.png
+Main: main.js
+Compatibility: 4.x

@@ -1,0 +1,13 @@
+{
+  "load_extensions": {
+    "ma/client/components/display_notes/main": true,
+    "usability/limit_output/main": true,
+    "usability/codefolding/main": true,
+    "usability/read-only/main" : true,
+    "config/config_menu/main": true,
+    "ma/client/components/side_comments/main": true
+  },
+  "limit_output": "1000",
+  "ma_server_url": "pycard.ifi.uzh.ch",
+  "ma_server_port": "8888"
+}

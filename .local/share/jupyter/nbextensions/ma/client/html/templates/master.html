@@ -1,0 +1,40 @@
+{% extends "page.html" %} {% block title %}{{page_title}}{% endblock %}
+{% block stylesheet %} {{super()}}
+<script type="text/javascript" charset="utf-8" data-requiremodule="jquery" src="/static/components/jquery/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<link href="/nbextensions/ma/client/common/js/jqpopup/magnific-popup.css" rel="stylesheet">
+
+<link href="/nbextensions/ma/client/common/css/dist_project.css" rel="stylesheet/less">
+<script src="/nbextensions/ma/client/common/js/less/less.js" type="text/javascript"></script>
+
+
+{% endblock %}
+{% block params %} data-base-url='{{base_url}}' data-extension-list='{{extension_list}}' {% endblock %}
+{% block headercontainer
+%}
+
+<center>
+  <h2>Distributed Projects</h2>
+</center>
+
+<div class="master">
+  <div class="content">
+    <div class="mining-step">
+      <div class="sbody">
+        <span class="stitle">Projects<a id="new_project" href="/new" target="blank"><i class="fa fa-plus fa-lg"></i></a></span>
+        <div class="acont"></div>
+      </div>
+    </div>
+
+    <div class="pr">
+    </div>
+
+  </div>
+</div>
+
+
+
+<script src="{{ " /nbextensions/config/main.js " }}" type="text/javascript" charset="utf-8"></script>
+<script src="{{ " /nbextensions/ma/client/html/master/main_master.js " }}" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
