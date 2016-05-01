@@ -26,6 +26,6 @@
     ".profile"
   ],
   "username": "root",
-  "password": "tOd@b1",
-  "transport": "scp"
+  "transport": "scp",
+  "useAgent": true
 }

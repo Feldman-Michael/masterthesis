@@ -199,7 +199,7 @@ require([
         */
       $(_delete).on('click', '#_delete:not(.disabled)',function(e){
         e.preventDefault();
-        var popup = $(builder.popup.FormButtons(['Cancel', 'Delete'],['disabled', 'delete'], null, 'Are you sure you want to delete the project?')).clone();
+        var popup = $(builder.popup.FormButtons(['Cancel', 'Delete'],['disabled', 'delete'], null, 'Are you sure you want to delete the project '+ project['name'] +'?')).clone();
 
         /**
           * Open popup

@@ -328,34 +328,42 @@ define(['exports',
           return Promise.all(opromises);
         }).then(function(){
           var mpromises = [];
-          for (j in nb.bundles){
 
+          var workers_unique = Array.from(new Set(workers));
+          for (l in workers_unique) {
+            /** Set reader permission for the project folder if user is not the project owner
+              * Set writer permission for the shared.txt file if user not the project owner
+              */
+            if(workers_unique[l] != nb.owner){
+              mlog(logs, 'Setting permissions for ' + workers_unique[l] + ' for ' + 'shared notes and project');
+
+              /** Generate email message for each of workers. This will be the content of the notification email received by Google.
+                */
+              var email_message = "A "+nb['kernel']+"-project "+nb['name']+" was created by " + nb['owner'] +" and a task was assigned to you. The task(s) " +
+              "are represented in IPython as " + "notebook.ipynb files."+ " \n \n" +
+              "Perform following steps in order: \n"+
+              "- Add the folder containing this task (IPython notebook) to your Google Drive by clicking the 'Open' button below and then 'Add to Drive' \n "+
+              "- Then go to http://pycard.ifi.uzh.ch:8888/master to view the project details and see which task is assigned to you. \n"
+
+              mpromises.push(gdapi.file_inserPermission(nb.gid, workers_unique[l], 'user', 'reader', true, email_message));
+              mpromises.push(gdapi.file_inserPermission(nb.variablesid, workers_unique[l], 'user', 'writer', false));
+            }
+          }
+
+          for (j in nb.bundles){
 
             mlog(logs, 'Setting writer permission for ' + nb.bundles[j].owner + ' for ' + j + '_' +'notebook.ipynb');
 
-            /** Generate email message for the assignment owner. This will be the content of the notification email received by Google.
-              */
-            var email_message = "A "+nb['kernel']+"-project "+nb['name']+" was created by " + nb['owner'] +" and a task was assigned to you. The task " +
-            "is represented in IPython as "+ j + "_notebook.ipynb"+ " \n \n" +
-            "Perform following steps in order: \n"+
-            "- Add the folder containing this task (IPython notebook) to your Google Drive by clicking the 'Open' button below and then 'Add to Drive' \n "+
-            "- Then go to http://pycard.ifi.uzh.ch:8888/master to view the project details. \n"+
-            "- Or to http://pycard.ifi.uzh.ch:8888/notebooks/"+ nb['gid'] + "/"+ j +"_notebook.ipynb to access the notebook directly. ";
-
             /** Set writer permission for the assignment owner for his notebook and shared.txt
               */
-
-            if(nb.owner != workers[j]){
-
-              /** Set reader permission for the project folder if user is not the project owner
-                */
-                mpromises.push(gdapi.file_inserPermission(nb.gid, workers[j], 'user', 'reader', true, email_message));
-            }
+            //mlog(logs, 'Owner: ' + nb.owner);
+            //mlog(logs, 'Worker: ' + workers[j]);
 
             mpromises.push(gdapi.file_inserPermission(nb.bundles[j].gid, nb.bundles[j].owner, 'user', 'writer', false));
-            mpromises.push(gdapi.file_inserPermission(nb.variablesid, nb.bundles[j].owner, 'user', 'writer', false));
 
           }
+
+
 
           return Promise.all(mpromises);
         }).then(function(){
