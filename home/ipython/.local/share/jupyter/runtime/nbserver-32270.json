@@ -1,0 +1,9 @@
+{
+  "notebook_dir": "/opt/ipython/nbstorage",
+  "port": 8888,
+  "hostname": "localhost",
+  "secure": false,
+  "url": "http://localhost:8888/",
+  "base_url": "/",
+  "pid": 32270
+}

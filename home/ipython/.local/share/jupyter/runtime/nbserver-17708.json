@@ -1,0 +1,9 @@
+{
+  "secure": false,
+  "notebook_dir": "/home/ipython/tmp",
+  "port": 8888,
+  "hostname": "localhost",
+  "url": "http://localhost:8888/",
+  "pid": 17708,
+  "base_url": "/"
+}

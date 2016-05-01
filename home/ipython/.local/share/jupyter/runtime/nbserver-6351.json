@@ -1,0 +1,9 @@
+{
+  "port": 8888,
+  "pid": 6351,
+  "notebook_dir": "/home/ipython",
+  "hostname": "localhost",
+  "url": "http://localhost:8888/",
+  "secure": false,
+  "base_url": "/"
+}

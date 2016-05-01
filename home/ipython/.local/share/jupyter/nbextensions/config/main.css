@@ -1,0 +1,121 @@
+/* nbext-page-title-wrap and nbext-page-title
+   are styled to match the notebook save widget */
+.nbext-page-title-wrap {
+    margin-top: 6px;
+}
+
+.nbext-page-title {
+    height: 1em;
+    line-height: 1em;
+    padding: 3px;
+    margin-left: 16px;
+    border: none;
+    font-size: 146.5%;
+    border-radius: 2px;
+}
+
+.nbext-showhide-incompat {
+    margin: 1em 0.5em 0.5em;
+    float: left;
+    clear: both;
+}
+
+/* styles for the extension-selector nav links */
+
+.nbext-selector {
+    border-bottom: 1px solid #888;
+    padding-bottom: 1em;
+}
+
+.nbext-selector > nav > .nav > li > a {
+    padding: 2px 6px;
+}
+
+.nbext-selector > nav > .nav > li > a > .nbext-active-toggle {
+    padding-right: 0.5em;
+    display: inline-block;
+}
+
+.nbext-selector > nav > .nav > li > a > .nbext-active-toggle:before {
+    /* fa-square-o */
+    content: "\f096";
+}
+
+.nbext-selector > nav > .nav > li > a > .nbext-activated:before {
+    /* fa-check-square-o */
+    content: "\f046";
+}
+
+.nbext-selector > nav > .nav > li.disabled > a > .nbext-active-toggle {
+    width: auto;
+}
+
+.nbext-selector > nav > .nav > li.disabled > a > .nbext-active-toggle:before {
+    /* fa-ban */
+    content: "\f05e  (incompatible)";
+}
+
+.nbext-selector > nav > .nav > li.disabled > a > .nbext-activated:before {
+    /* fa-exclamation-circle */
+    content: "\f06a  (incompatible, enabled)";
+}
+
+/* styles for elements in an extension's UI */
+
+.nbext-activate-btns .btn {
+    border-radius: 4px;
+}
+
+.nbext-activate-btns .btn[disabled] {
+    color: #cccccc;
+}
+
+.nbext-icon {
+    margin-left: 8px;
+    text-align: center;
+}
+
+.nbext-icon img {
+    max-height: 120px;
+    max-width: 100%;
+}
+
+.nbext-icon,
+.nbext-desc,
+.nbext-compat-div,
+.nbext-activate-btns,
+.nbext-params {
+    margin-bottom: 8px;
+}
+
+.nbext-params > .panel-heading {
+    font-size: 110%;
+}
+
+/* styles for list inputs */
+
+.nbext-list-element,
+.nbext-list-element-placeholder {
+    margin-bottom: 2px;
+}
+
+.nbext-list-element-placeholder {
+    height: 32px;
+    width: 100%;
+    border: 1px solid #fcefa1;
+    background-color: #fbf9ee;
+    color: #363636;
+}
+
+.nbext-list-element:only-child > .handle {
+    display: none;
+}
+
+.nbext-list-element:only-child > .handle + .form-control {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.input-group .nbext-list-btn-add {
+    font-size: inherit;
+}

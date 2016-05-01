@@ -1,0 +1,42 @@
+{% extends "page.html" %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block stylesheet %}
+{{super()}}
+{% endblock %}
+
+{% block params %}
+
+data-base-url='{{base_url}}'
+data-md-url='{{md_url}}'
+
+{% endblock %}
+
+{% block headercontainer %}
+
+<div class="pull-left rendermd-page-title-wrap">
+	<span class="rendermd-page-title">{{ page_title }}</span>
+</div>
+
+{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block site %}
+
+{# the "rendered_html" class, will make everything look like notebook-formatted markdown cells. The custom css loaded by render.js is used to add backgrounds for <code> and <pre> blocks and snippets #}
+<div id="render-container" class="container rendered_html"></div>
+
+{% endblock %}
+
+{% block script %}
+
+    {{super()}}
+
+<script type="text/javascript" charset="utf-8">
+    require(["nbextensions/config/render/render"]);
+</script>
+{% endblock %}
